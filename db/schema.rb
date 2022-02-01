@@ -10,25 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_01_154516) do
+ActiveRecord::Schema.define(version: 2022_02_01_230041) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "activities", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
-    t.integer "attachment"
-    t.integer "preview_img"
+    t.string "title", null: false
+    t.text "description", null: false
     t.bigint "unit_id", null: false
+    t.boolean "done", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["unit_id"], name: "index_activities_on_unit_id"
   end
 
   create_table "courses", force: :cascade do |t|
-    t.string "name"
-    t.integer "course_img"
+    t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -44,8 +42,8 @@ ActiveRecord::Schema.define(version: 2022_02_01_154516) do
   end
 
   create_table "solutions", force: :cascade do |t|
-    t.integer "attachment"
     t.integer "score"
+    t.text "comment"
     t.bigint "enrollment_id", null: false
     t.bigint "activity_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -55,8 +53,8 @@ ActiveRecord::Schema.define(version: 2022_02_01_154516) do
   end
 
   create_table "units", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
+    t.string "title", null: false
+    t.text "description", null: false
     t.bigint "course_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -64,8 +62,8 @@ ActiveRecord::Schema.define(version: 2022_02_01_154516) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name", default: "", null: false
-    t.string "last_name", default: "", null: false
+    t.string "first_name", null: false
+    t.string "last_name", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.boolean "teacher", default: false, null: false
