@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Cursos Disponibles</h1>
+  <ul>
+    <% @courses.each do |course| %>
+    <li><%= link_to course.name, course_path(courses) %></li>
+    <% end %>
+  </ul>
+</div>
