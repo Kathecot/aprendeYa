@@ -9,7 +9,6 @@ class SolutionsController < ApplicationController
   end
 
   def update
-
   end
 
   private
