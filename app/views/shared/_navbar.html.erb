@@ -1,12 +1,10 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class = "navbar-brand">
+    <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/d/df/PCM-Educaci%C3%B3n.png", style: "width: 150px" %>
+  </div>
   <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/d/df/PCM-Educaci%C3%B3n.png" %>
+    <%= image_tag "https://i.ibb.co/25FBdMM/logo-aprende-ya.png", style: "width: 150px" %>
       <% end %>
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Aprendo_en_casa.svg/2560px-Aprendo_en_casa.svg.png" %>
-      <% end %>
-
-
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -31,8 +29,7 @@
           </div>
         </li>
       <% else %>
-        <li class="nav-item">
-          <p>¿Nuevo por aquí?</p>
+        <li class="btn-register btn-sm active">
           <%= link_to "Regístrate", new_user_session_path, class: "nav-link" %>
         </li>
       <% end %>
