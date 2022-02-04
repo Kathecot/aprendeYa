@@ -1,5 +1,5 @@
 .navbar-lewagon {
-  justify-content: space-between;
+  justify-content: space-around;
   background: white;
 }
 
@@ -9,4 +9,13 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.btn-register {
+  background-color: #c943a3;
+  color: white;
+}
+
+.btn-btn-primary {
+  border-radius: 50%;
 }
