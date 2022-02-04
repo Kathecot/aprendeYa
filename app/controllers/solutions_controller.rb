@@ -5,7 +5,8 @@ class SolutionsController < ApplicationController
     # redirect_to courses_path if !current_user.teacher
   end
 
-  def show; end
+  def show
+  end
 
   def create
     @activity = Activity.find(params[:activity_id])
