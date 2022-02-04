@@ -23,6 +23,7 @@ class ActivitiesController < ApplicationController
   end
 
   def update
+
   end
 
   def edit
