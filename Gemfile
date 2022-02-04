@@ -25,6 +25,9 @@ gem 'redis', '~> 4.0'
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
 
+# Active Storage PDF preview support
+gem 'poppler'
+
 # Use Amazon S3 cloud storage service for Active Storage
 # gem "aws-sdk-s3", require: false
 
