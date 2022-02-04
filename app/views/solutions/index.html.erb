@@ -1,4 +1,13 @@
 <div class="container">
   <h1>Solution index</h1>
-
+  <% @solutions.each do |s| %>
+    <div>
+      <h2>
+        <%= s.activity.title %>
+      </h2>
+      <p>
+       <%= s.score %>
+      </p>
+    </div>
+  <% end %>
 </div>

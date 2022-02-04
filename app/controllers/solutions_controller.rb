@@ -1,11 +1,8 @@
 class SolutionsController < ApplicationController
-  before_action :set_solution, only: [:update, :show, :edit_grade]
+  before_action :set_solution, only: [:update, :show, :edit_grade, :submit_grade]
   def index
-    # visualizar las soluciones de los alumnos
     @solutions = Solution.all
-    #raise
-    #@enrollment = @activity.unit.course.enrollments.find_by(user: current_user)
-
+    # redirect_to courses_path if !current_user.teacher
   end
 
   def show; end
@@ -21,11 +18,11 @@ class SolutionsController < ApplicationController
   end
 
   def edit_grade
-    @solution.update(solution_params)
-    redirect_to activity_path(@ctivity)
   end
 
   def submit_grade
+    @solution.update(solution_params)
+    redirect_to activity_path(@solution.activity)
   end
 
   private
