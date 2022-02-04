@@ -26,14 +26,13 @@ class SolutionsController < ApplicationController
   end
 
   def submit_grade
-
   end
 
   private
+
   def solution_params
     params.require(:solutions).permit(:score, :file, :comment)
   end
-
 
   def set_solution
     @solution = Solution.find(params[:id])
