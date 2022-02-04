@@ -1,1 +1,18 @@
+<<<<<<< HEAD
 <h1>detalles del curso</h1>
+=======
+<div class="container">
+  <h1>Curso: <%= @course.name %></h1>
+  <div class="container units">
+    <h2>Unidades:</h2>
+    <% @course.units.each do |u| %>
+      <div class='unit-card'>
+      <%= link_to u do %>
+        <h3><%= u.title %></h3>
+      <% end %>
+      <%= image_tag u.unit_img %>
+      </div>
+    <% end %>
+  </div>
+</div>
+>>>>>>> master
