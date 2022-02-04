@@ -7,7 +7,7 @@ class ActivitiesController < ApplicationController
 
   def get_by_type
     if Activity.activity_types.keys.include?(params[:type])
-      @activities = Activity.where(activity_type: params[:type])
+      @activities = Activity.where(activity_type: params[:type], unit: params[:unit_id])
     else
       @activities = []
     end

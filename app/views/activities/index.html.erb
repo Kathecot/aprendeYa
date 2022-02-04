@@ -1,50 +1,52 @@
-<div class="dropdown">
-  <button class="dropbtn">Filtrar</button>
-  <div class="dropdown-content">
-    <a class="btn-finalizados" href="#">Finalizados</a>
-    <a class="btn-pendientes" href="#">Pendientes</a>
-    <a class="btn-todos" href="#">Todos</a>
+<div class="container">
+  <div class="dropdown">
+    <button class="dropbtn">Filtrar</button>
+    <div class="dropdown-content">
+      <input type="button" class="btn-finalizados" value="Finalizados">
+      <input type="button" class="btn-pendientes" value="Pendientes">
+      <input type="button" class="btn-todos" value="Todos">
+    </div>
   </div>
-</div>
-<div class="div-finalizados">
-<h2>Actividades finalizadas</h2>
-<% @units.each do |unit| %>
-  <% @activities.each do |activity|%>
-      <% if activity.unit_id == unit.id && activity.done == true %>
+  <div class="div-finalizados">
+  <h2>Actividades finalizadas</h2>
+  <% @units.each do |unit| %>
+    <% @activities.each do |activity|%>
+        <% if activity.unit_id == unit.id && activity.done == true %>
 
-        <ul>
-          <li> <%= link_to activity.title, activity_path(activity) %></li>
-        </ul>
-      <% end %>
+          <ul>
+            <li> <%= link_to activity.title, activity_path(activity) %></li>
+          </ul>
+        <% end %>
+    <% end %>
   <% end %>
-<% end %>
-</div>
-<div class="div-pendientes">
-<h2>Actividades pendientes</h2>
-<% @units.each do |unit| %>
-<h3><%= unit.title %></h3>
-  <% @activities.each do |activity|%>
+  </div>
+  <div class="div-pendientes">
+  <h2>Actividades pendientes</h2>
+  <% @units.each do |unit| %>
+  <h3><%= unit.title %></h3>
+    <% @activities.each do |activity|%>
 
-      <% if activity.unit_id == unit.id && activity.done == false%>
-        <ul>
+        <% if activity.unit_id == unit.id && activity.done == false%>
+          <ul>
 
-          <li> <%= link_to activity.title, activity_path(activity) %></li>
-        </ul>
-      <% end %>
+            <li> <%= link_to activity.title, activity_path(activity) %></li>
+          </ul>
+        <% end %>
+    <% end %>
   <% end %>
-<% end %>
-</div>
-<div class="div-todos">
-<h2>Todas las actividades</h2>
-<% @units.each do |unit| %>
-<h3><%= unit.title %></h3>
-  <% @activities.each do |activity|%>
+  </div>
+  <div class="div-todos">
+  <h2>Todas las actividades</h2>
+  <% @units.each do |unit| %>
+  <h3><%= unit.title %></h3>
+    <% @activities.each do |activity|%>
 
-      <% if activity.unit_id == unit.id %>
-        <ul>
-          <li> <%= link_to activity.title, activity_path(activity) %></li>
-        </ul>
-      <% end %>
+        <% if activity.unit_id == unit.id %>
+          <ul>
+            <li> <%= link_to activity.title, activity_path(activity) %></li>
+          </ul>
+        <% end %>
+    <% end %>
   <% end %>
-<% end %>
+  </div>
 </div>
