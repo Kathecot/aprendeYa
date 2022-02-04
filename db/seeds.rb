@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Adding Courses
+Course.all.each do |c|
+  c.course_img.purge
+end
 Course.destroy_all
 course = Course.create(name: 'Comunicación')
 course.course_img.attach(io: File.open('./ImagesAprendeYa/communication.png'), filename: 'course_img_comunicacion.png')
@@ -20,6 +23,9 @@ course = Course.create(name: 'Inglés')
 course.course_img.attach(io: File.open('./ImagesAprendeYa/english.png'), filename: 'course_img_ingles.png')
 
 # Adding Units
+Unit.all.each do |u|
+  u.unit_img.purge
+end
 Unit.destroy_all
 course = Course.find_by(name: 'Matemáticas')
 title = 'Estadistica: Interpretacion y Analisis de Patrones y Probabilidades'
@@ -32,6 +38,9 @@ unit = Unit.create(title: title,description: description,course: course)
 unit.unit_img.attach(io: File.open('./ImagesAprendeYa/fraction.png'), filename: 'unit_img_fracciones.png')
 
 # Adding Activities
+Activity.all.each do |a|
+  a.file.purge
+end
 Activity.destroy_all
 
 # Ejercicios
