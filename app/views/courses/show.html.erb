@@ -11,4 +11,8 @@
       </div>
     <% end %>
   </div>
+  <% if Enrollment.find_by(course: @course,user:current_user).nil? %>
+    <%= link_to 'Matriculate',course_enrollments_path(params[:id]),method: :post%>
+    <%= button_to 'Matriculate', course_enrollments_path(params[:id]),method: :post %>
+  <% end %>
 </div>
