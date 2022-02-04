@@ -4,7 +4,8 @@ class EnrollmentsController < ApplicationController
   end
 
   def create
-    @enrollment = Enrollment.new(enrollment_params)
+    @enrollment = Enrollment.create(course_id: params[:course_id], user: current_user)
+    redirect_to course_path(params[:course_id])
   end
 
   private

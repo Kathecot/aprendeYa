@@ -6,12 +6,20 @@ class ActivitiesController < ApplicationController
   end
 
   def get_by_type
+    if Activity.activity_types.keys.include?(params[:type])
+      @activities = Activity.where(activity_type: params[:type], unit: params[:unit_id])
+    else
+      @activities = []
+    end
   end
 
   def show
+    @activity = Activity.find(params[:id])
   end
 
   def index
+    @units = Unit.all
+    @activities = Activity.activity_type_ejercicio
   end
 
   def update

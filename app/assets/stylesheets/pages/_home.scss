@@ -5,10 +5,18 @@
 }
 
 .body {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%,rgba(255, 255, 255, 0.8) 100%), url(https://previews.123rf.com/images/jevee/jevee1703/jevee170300699/73130744-nahtlose-vektor-geometrischen-muster-mit-raute-quadrate-endloser-hintergrund-mit-handgezeichneten-st.jpg);
-
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0.8) 100%
+    ),
+    url(https://previews.123rf.com/images/jevee/jevee1703/jevee170300699/73130744-nahtlose-vektor-geometrischen-muster-mit-raute-quadrate-endloser-hintergrund-mit-handgezeichneten-st.jpg);
 }
 
 .pading {
   padding-top: 50px;
+}
+
+.div-centrado {
+  margin: 0 auto;
 }
