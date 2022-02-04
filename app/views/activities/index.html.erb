@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class="div-finalizados">
-  <h2>Actividades finalizadas</h2>
+  <h2>Ejercicios finalizados</h2>
   <% @units.each do |unit| %>
     <% @activities.each do |activity|%>
         <% if activity.unit_id == unit.id && activity.done == true %>
@@ -21,7 +21,7 @@
   <% end %>
   </div>
   <div class="div-pendientes">
-  <h2>Actividades pendientes</h2>
+  <h2>Ejercicios pendientes</h2>
   <% @units.each do |unit| %>
   <h3><%= unit.title %></h3>
     <% @activities.each do |activity|%>
@@ -36,7 +36,7 @@
   <% end %>
   </div>
   <div class="div-todos">
-  <h2>Todas las actividades</h2>
+  <h2>Todos los Ejercicios</h2>
   <% @units.each do |unit| %>
   <h3><%= unit.title %></h3>
     <% @activities.each do |activity|%>

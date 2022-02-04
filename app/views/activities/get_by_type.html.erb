@@ -3,10 +3,12 @@
   <div class="container activities">
       <% @activities.each do |a| %>
         <div class='activity-card'>
-          <% if a.done == false %>
-            <p><i class="fas fa-circle" style="color:red"></i> Pendiente</p>
-          <% else %>
-            <p><i class="fas fa-check" style="color:green"></i></i> Hecho</p>
+          <% if a.activity_type_ejercicio? %>
+            <% if a.done == false %>
+              <p><i class="fas fa-circle" style="color:red"></i> Pendiente</p>
+            <% else %>
+              <p><i class="fas fa-check" style="color:green"></i></i> Hecho</p>
+            <% end %>
           <% end %>
           <%= link_to a do %>
             <h3><%= a.title %></h3>

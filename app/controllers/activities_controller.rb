@@ -19,7 +19,7 @@ class ActivitiesController < ApplicationController
 
   def index
     @units = Unit.all
-    @activities = Activity.all
+    @activities = Activity.activity_type_ejercicio
   end
 
   def update

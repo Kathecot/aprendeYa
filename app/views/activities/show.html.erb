@@ -1,8 +1,10 @@
 <div class="container">
-  <% if @activity.done == false %>
-    <p><i class="fas fa-circle" style="color:red"></i> Pendiente</p>
-  <% else %>
-    <p><i class="fas fa-check" style="color:green"></i></i> Hecho</p>
+  <% if @activity.activity_type_ejercicio? %>
+    <% if @activity.done == false %>
+      <p><i class="fas fa-circle" style="color:red"></i> Pendiente</p>
+    <% else %>
+      <p><i class="fas fa-check" style="color:green"></i></i> Hecho</p>
+    <% end %>
   <% end %>
   <h2><%= @activity.title %></h2>
   <p><%= @activity.description %></p>
