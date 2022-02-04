@@ -5,10 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-<<<<<<< HEAD
-activity = Activity.new(title: "clases", done: true)
-activity.save
-=======
 
 # Adding Courses
 Course.destroy_all
@@ -59,4 +55,3 @@ title = 'Descubrimos patrones en actividades físicas'
 description = 'Los patrones se manifiestan en la vida cotidiana y en la naturaleza. El patrón es una secuencia que tiene una regla. Cuando un patrón o secuencia tiene un núcleo que se repite en forma periódica, se llama patrón de repetición. Con estos patrones, podemos elaborar, por ejemplo, diseños, rutinas y muchas otras actividades más. Estos se construyen o crean siguiendo una regla de repetición.'
 activity = Activity.create(title: title,description: description,unit: unit,activity_type: 'clase')
 activity.file.attach(io: File.open('./VideosAprendeYa/clase_Descubrimos_patrones_en_actividades_fisicas.mp4'), filename: 'clase_Descubrimos_patrones_en_actividades_fisicas.mp4')
->>>>>>> master
