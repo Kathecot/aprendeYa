@@ -2,10 +2,7 @@
   "name": "aprende-ya",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
-=======
     "@fortawesome/fontawesome-free": "^5.15.4",
->>>>>>> 7efaa5dd5e5704623d3bbd9d31d96d72eb4e533a
     "@popperjs/core": "^2.11.2",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
