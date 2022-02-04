@@ -4,9 +4,7 @@
     <h2>Unidades:</h2>
     <% @course.units.each do |u| %>
       <div class='unit-card'>
-      <%= link_to u do %>
-        <h3><%= u.title %></h3>
-      <% end %>
+      <%= link_to_unless Enrollment.find_by(course: @course,user:current_user).nil?, raw("<h3>#{u.title}</h3>"),u %>
       <%= image_tag u.unit_img %>
       </div>
     <% end %>
