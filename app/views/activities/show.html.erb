@@ -1,0 +1,17 @@
+<% if @activity.done == false %>
+  <p><i class="fas fa-circle" style="color:red"></i> Pendiente</p>
+<% else %>
+  <p><i class="fas fa-check" style="color:green"></i></i> Hecho</p>
+<% end %>
+<h2><%= @activity.title %></h2>
+<p><%= @activity.description %></p>
+<button><%= link_to "Volver a actividades", activities_path() %></button>
+
+<div class="grade-box">
+  <p class="score">
+  <%= @solution.score %>
+  </p>
+  <p class="comment">
+  <%= @solution.comment %>
+  </p>
+</div>

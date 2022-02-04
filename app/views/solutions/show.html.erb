@@ -1,0 +1,5 @@
+<% if @activity.done == true %>
+  <%= simple_form_for @activity.solution do |f| %>
+  <%= f.input :score %>
+  <%= f.input :comment %>
+<% end %>
