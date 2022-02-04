@@ -8,7 +8,7 @@ class SolutionsController < ApplicationController
 
   end
 
-  def show;end
+  def show; end
 
   def create
     @activity = Activity.find(params[:activity_id])
@@ -19,7 +19,6 @@ class SolutionsController < ApplicationController
     @solution.save
     redirect_to activity_path(@activity)
   end
-
 
   def edit_grade
     @solution.update(solution_params)

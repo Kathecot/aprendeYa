@@ -1,6 +1,9 @@
 <div class="container">
   <h1>Solution index</h1>
   <% @solution.each do |solution|%>
-
+     <ul>
+      <li> <%= solution.score %> </li>
+      <li> <%= solution.comment %></li>
+     </ul>
   <% end %>
 </div>
